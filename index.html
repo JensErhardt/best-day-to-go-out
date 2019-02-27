@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>The Best Day To Go Out</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header mt-5">
+      <h1>What is the best day to go out?</h1>
+      <h2>And where to go?</h2>
+    </div>
+
+    <div class="main-text mb-5">
+      <p>These are questions you dont have to answer anymore, because from now
+        on an neuronal network will decide for you.<br />
+        <small>At least as you like the same restaurans as I do :).</small>
+      </p>
+      <p>Below you will find a table with a few of my favorite restaurans in Berlin and
+        the perfect day to go there. Once this page is loaded the neuronal network is trained to 
+        learn from that data which restaurant is the best to go to on which day of the week or the other way around.
+        The training stats are shown below as soon as you hit the "Go Out"-Button. An error 
+        rate close to 0 means that the learning process was successful. The Iterations
+        say how many times the set of data has passed the neurons. Once you decide to go out,
+        the trained neuronal network is started to find the most suitable answer to your question.
+      </p>
+
+      <table>
+        <tr>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday</th>
+          <th>Sunday</th>
+        </tr>
+        <tr>
+          <td>Madame Ngo</td>
+          <td>Fresh & Easy</td>
+          <td>893 Ryotei</td>
+          <td>Kuchi</td>
+          <td>Pastis</td>
+          <td>Golden Phoenix</td>
+          <td>Asude</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="main-brain">
+      <div class="row">
+        <div class="col-6">
+
+          <div class="day-brain">
+            <h3>Choose Day to go out</h3>
+            <div class="m-3">
+              <input type="text" id="input-day" placeholder="e.g. Monday" />
+              <button class="btn btn-primary" onclick="goOutByDay()">Go Out</button>
+            </div>
+            <div class="m-3">
+              <p>The perfect restaurant is: <b><span id="day-perfect"></span></b></p>
+            </div>
+          </div>
+
+          <div id="day-training-stats">
+            <table>
+              <tr>
+                <th>Error</th>
+                <th>Iterations</th>
+              </tr>
+              <tr>
+                <td id="day-error">0</td>
+                <td id="day-iterations">0</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="col-6">
+          <h3>Choose Restaurant to go to</h3>
+          <div class="restaurant-brain">
+              <div class="m-3">
+                <input type="text" id="input-restaurant" placeholder="e.g. Golden Phoenix" />
+                <button class="btn btn-primary" onclick="goOutByRestaurant()">Go Out</button>
+              </div>
+              <div class="m-3">
+                <p>The perfect restaurant is: <b><span id="restaurant-perfect"></span></b></p>
+              </div>
+            </div>
+  
+            <div id="restaurant-training-stats">
+              <table>
+                <tr>
+                  <th>Error</th>
+                  <th>Iterations</th>
+                </tr>
+                <tr>
+                  <td id="restaurant-error">0</td>
+                  <td id="restaurant-iterations">0</td>
+                </tr>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

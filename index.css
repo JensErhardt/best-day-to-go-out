@@ -1,0 +1,9 @@
+table, th, td {
+  border: 1px solid black;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#day-perfect {
+  font-size: 18px;
+}
